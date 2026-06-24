@@ -10,7 +10,7 @@ public final class zAntiDrop extends JavaPlugin {
     public void onEnable() {
         saveDefaultConfig();
 
-        this.dropEnabled = getConfig().getBoolean("drop-enabled", true);
+        this.dropEnabled = getConfig().getBoolean("drop-enabled", false);
 
         if (getCommand("antidrop") != null) {
             AntiDropCommand cmd = new AntiDropCommand(this);
@@ -38,11 +38,8 @@ public final class zAntiDrop extends JavaPlugin {
         saveConfig();
     }
 
-    /**
-     * Reloads configuration from disk and updates local caches.
-     */
     public void reloadPluginConfig() {
         reloadConfig();
-        this.dropEnabled = getConfig().getBoolean("drop-enabled", true);
+        this.dropEnabled = getConfig().getBoolean("drop-enabled", false);
     }
 }

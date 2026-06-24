@@ -12,7 +12,7 @@ A Minecraft plugin to disable dropping of items.
 ```yaml
 # If true, all players can drop items.
 # If false, players cannot drop items unless they are in creative mode or have the 'zantidrop.dropitems' permission.
-drop-enabled: true
+drop-enabled: false
 
 # The message sent to players when their item drop is blocked.
 # Color codes (using & or hex &#RRGGBB) and \n (for newlines) are supported.
