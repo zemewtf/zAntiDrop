@@ -1,0 +1,14 @@
+name: zAntiDrop
+version: 1.0.0
+main: ovh.zeme.zantidrop.zAntiDrop
+api-version: '1.21'
+author: zeme
+commands:
+  antidrop:
+    permission: zantidrop.admin
+    usage: /antidrop <on|off>
+permissions:
+  zantidrop.admin:
+    default: op
+  zantidrop.dropitems:
+    default: op

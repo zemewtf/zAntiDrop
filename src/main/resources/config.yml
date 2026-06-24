@@ -1,0 +1,17 @@
+# zAntiDrop Configuration File
+
+# If true, all players can drop items.
+# If false, players cannot drop items unless they are in creative mode or have the 'zantidrop.dropitems' permission.
+drop-enabled: true
+
+# The message sent to players when their item drop is blocked.
+# Color codes (using & or hex &#RRGGBB) and \n (for newlines) are supported.
+# Set to "" to disable the message.
+blocked-message: "&cYou do not have permission to drop items!"
+
+# Messages
+messages:
+  no-permission: "&cYou do not have permission to run this command!"
+  usage: "&cUsage: /antidrop <on|off>"
+  enabled-global: "&aItem dropping has been enabled globally."
+  disabled-global: "&cItem dropping has been disabled globally."
