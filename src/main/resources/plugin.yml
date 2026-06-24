@@ -1,5 +1,5 @@
 name: zAntiDrop
-version: 1.0.1
+version: 1.0.2
 main: ovh.zeme.zantidrop.zAntiDrop
 api-version: '1.16'
 author: zeme

@@ -16,11 +16,22 @@ public class DropListener implements Listener {
 
     @EventHandler
     public void onPlayerDrop(PlayerDropItemEvent event) {
-        if (plugin.isDropEnabled()) {
-            return;
+        Player player = event.getPlayer();
+        String worldName = player.getWorld().getName();
+
+        boolean droppingEnabled = plugin.isDropEnabled();
+        String worldStatus = plugin.getConfig().getString("worlds." + worldName);
+        if (worldStatus != null) {
+            if (worldStatus.equalsIgnoreCase("enabled")) {
+                droppingEnabled = true;
+            } else if (worldStatus.equalsIgnoreCase("disabled")) {
+                droppingEnabled = false;
+            }
         }
 
-        Player player = event.getPlayer();
+        if (droppingEnabled) {
+            return;
+        }
 
         if (player.getGameMode() == GameMode.CREATIVE || player.hasPermission("zantidrop.dropitems")) {
             return;

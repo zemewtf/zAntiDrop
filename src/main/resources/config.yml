@@ -2,6 +2,13 @@
 # If false, players cannot drop items unless they are in creative mode or have the 'zantidrop.dropitems' permission.
 drop-enabled: false
 
+# Per-world settings.
+# If a world is set to 'enabled', players can drop items.
+# If set to 'disabled', players cannot drop items (unless creative or possessing permission).
+# If a world is not listed, it will fall back to the global 'drop-enabled' setting above.
+worlds:
+  world-disabled: disabled
+
 # The message sent to players when their item drop is blocked.
 # Color codes (using & or hex &#RRGGBB) and \n (for newlines) are supported.
 # Set to "" to disable the message.
