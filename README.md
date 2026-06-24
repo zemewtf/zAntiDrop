@@ -1,3 +1,15 @@
+# zAntiDrop
+
+A Minecraft plugin to disable dropping of items.
+
+## Commands & Permissions
+
+- **Command**: `/antidrop <on/off/reload>`
+- **Permissions**: `zantidrop.admin` (to use the command), `zantidrop.dropitems` (to drop items)
+
+## Configuration
+
+```yaml
 # If true, all players can drop items.
 # If false, players cannot drop items unless they are in creative mode or have the 'zantidrop.dropitems' permission.
 drop-enabled: true
@@ -14,3 +26,14 @@ messages:
   enabled-global: "&aItem dropping has been enabled globally."
   disabled-global: "&cItem dropping has been disabled globally."
   reloaded: "&aConfiguration has been reloaded."
+```
+
+## Compilation
+
+The project uses Gradle. To compile the plugin and generate the `.jar` file, run the following command in the project root:
+
+```bash
+./gradlew build
+```
+
+You can find the compiled `.jar` file in `build/libs/zAntiDrop-X.jar`.

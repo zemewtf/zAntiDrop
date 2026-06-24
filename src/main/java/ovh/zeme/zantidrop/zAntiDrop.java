@@ -37,4 +37,12 @@ public final class zAntiDrop extends JavaPlugin {
         getConfig().set("drop-enabled", dropEnabled);
         saveConfig();
     }
+
+    /**
+     * Reloads configuration from disk and updates local caches.
+     */
+    public void reloadPluginConfig() {
+        reloadConfig();
+        this.dropEnabled = getConfig().getBoolean("drop-enabled", true);
+    }
 }

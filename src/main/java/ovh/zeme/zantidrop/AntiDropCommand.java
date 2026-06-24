@@ -37,6 +37,11 @@ public class AntiDropCommand implements CommandExecutor, TabCompleter {
                 String disabledMsg = plugin.getConfig().getString("messages.disabled-global");
                 sender.sendMessage(ColorUtils.translate(disabledMsg));
                 return true;
+            } else if (args[0].equalsIgnoreCase("reload")) {
+                plugin.reloadPluginConfig();
+                String reloadMsg = plugin.getConfig().getString("messages.reloaded");
+                sender.sendMessage(ColorUtils.translate(reloadMsg));
+                return true;
             }
         }
 
@@ -55,6 +60,7 @@ public class AntiDropCommand implements CommandExecutor, TabCompleter {
             List<String> completions = new ArrayList<>();
             completions.add("on");
             completions.add("off");
+            completions.add("reload");
             return StringUtil.copyPartialMatches(args[0], completions, new ArrayList<>());
         }
         
